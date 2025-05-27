@@ -5,7 +5,7 @@ The outline of the architecture involved Django-React project based on our work 
 
 The project follows a common **client-server architecture**, also often referred to as a **three-tier architecture** (Presentation, Application, Data) when considering the database.
 
-Here's a breakdown:
+Here's a breakdown: 
 
 1.  **Frontend (Client-Side / Presentation Tier):**
     *   **Technology:** React (using Vite for the build tool).
