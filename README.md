@@ -1,5 +1,5 @@
 
-The project was developed completely using cursor AI except baselin scripts for setting up development environment, No manual codeing involved.
+The project was developed completely using cursor AI except baseline scripts for setting up development environment, No manual codeing involved.
 
 The outline of the architecture involved Django-React project based on our work together.
 
