@@ -1,7 +1,7 @@
 
 The project was developed completely using cursor AI except baselin scripts for setting up development environment, No manual codeing involved.
 
-The outline of the project architecture involved Django-React project based on our work together.
+The outline of the architecture involved Django-React project based on our work together.
 
 The project follows a common **client-server architecture**, also often referred to as a **three-tier architecture** (Presentation, Application, Data) when considering the database.
 
@@ -82,3 +82,55 @@ Here's a breakdown:
     *   `DEBUG` would be `False`, `ALLOWED_HOSTS` and `CORS_ALLOWED_ORIGINS` would be configured specifically.
 
 This architecture separates concerns effectively: the frontend handles the user interface and experience, while the backend manages data and business logic. This makes the application more scalable, maintainable, and allows different teams to potentially work on the frontend and backend independently.
+
+Folder Structure 
+
+Django-React-Cursor-main/
+├── backend/
+│   ├── api/
+│   │   ├── migrations/
+│   │   │   └── __init__.py
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py         # Django models (database schema)
+│   │   ├── serializers.py    # DRF serializers (data conversion)
+│   │   ├── tests.py
+│   │   ├── urls.py           # API specific URL routing
+│   │   └── views.py          # API request handlers (DRF views)
+│   ├── crud/                 # Django project directory
+│   │   ├── __init__.py
+│   │   ├── asgi.py
+│   │   ├── settings.py       # Django project settings
+│   │   ├── urls.py           # Main project URL routing
+│   │   └── wsgi.py
+│   ├── venv/                 # Python virtual environment (should be in .gitignore)
+│   ├── db.sqlite3            # Development database file
+│   └── manage.py             # Django management script
+│
+├── frontend/
+│   ├── node_modules/         # Project dependencies (should be in .gitignore)
+│   ├── public/
+│   │   └── vite.svg          # Example static asset
+│   ├── src/
+│   │   ├── assets/
+│   │   │   └── react.svg     # Example static asset
+│   │   ├── components/
+│   │   │   ├── ProjectForm.jsx   # React component for add/edit project
+│   │   │   └── ProjectTable.jsx  # React component for displaying projects
+│   │   ├── services/
+│   │   │   └── api.js        # Axios API client configuration
+│   │   ├── App.css
+│   │   ├── App.jsx           # Main React application component
+│   │   ├── index.css
+│   │   └── main.jsx          # Entry point for the React application
+│   ├── .eslintrc.cjs
+│   ├── .gitignore
+│   ├── index.html            # Main HTML page for the SPA
+│   ├── package-lock.json
+│   ├── package.json          # Frontend project dependencies and scripts
+│   └── vite.config.js        # Vite build configuration
+│
+├── .git/                     # Git repository data
+├── .gitignore                # Specifies intentionally untracked files for Git
+└── README.md                 # Project documentation (you might add one)
