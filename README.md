@@ -1,4 +1,6 @@
 
+The project was developed completely using cursor AI except baselin scripts for setting up development environment, No manual codeing involved.
+
 The outline of the project architecture of this Django-React project based on our work together.
 
 The project follows a common **client-server architecture**, also often referred to as a **three-tier architecture** (Presentation, Application, Data) when considering the database.
