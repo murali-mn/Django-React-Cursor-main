@@ -1,0 +1,20 @@
+
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=muralimn
+Group=www-data
+WorkingDirectory=/home/muralimn/Django-React-Cursor-main/backend
+ExecStart=/home/muralimn/Django-React-Cursor-main/venv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          --chdir /home/muralimn/Django-React-Cursor-main/backend/crud  \
+          crud.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
